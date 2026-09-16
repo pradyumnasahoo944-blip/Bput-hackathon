@@ -24,7 +24,7 @@ function Sidebar({ activePage, setActivePage, isOpen, setIsOpen }) {
           fixed md:static
           z-40
           top-0 left-0
-          h-full
+          h-screen
           w-64
           bg-slate-900
           text-white
