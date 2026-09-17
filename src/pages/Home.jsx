@@ -1,5 +1,8 @@
+import { useNavigate } from "react-router-dom"
 
-function Home({ setRole }) {
+function Home() {
+
+  const navigate = useNavigate()
 
   const services = [
     ["📊", "Attendance", "Track attendance and stay updated with your academic progress."],
@@ -43,19 +46,31 @@ function Home({ setRole }) {
 
           <div className="hidden md:flex items-center gap-8 text-gray-600 font-medium">
 
-            <a href="#features" className="hover:text-blue-600 transition">
+            <a
+              href="#features"
+              className="hover:text-blue-600 transition"
+            >
               Features
             </a>
 
-            <a href="#services" className="hover:text-blue-600 transition">
+            <a
+              href="#services"
+              className="hover:text-blue-600 transition"
+            >
               Services
             </a>
 
-            <a href="#how-it-works" className="hover:text-blue-600 transition">
+            <a
+              href="#how-it-works"
+              className="hover:text-blue-600 transition"
+            >
               How It Works
             </a>
 
-            <a href="#about" className="hover:text-blue-600 transition">
+            <a
+              href="#about"
+              className="hover:text-blue-600 transition"
+            >
               About
             </a>
 
@@ -63,7 +78,7 @@ function Home({ setRole }) {
 
 
           <button
-            onClick={() => setRole("student")}
+            onClick={() => navigate("/login/student")}
             className="bg-blue-600 text-white px-5 py-2.5 rounded-lg font-semibold hover:bg-blue-700 transition shadow-sm"
           >
             Get Started
@@ -112,16 +127,20 @@ function Home({ setRole }) {
 
             <div className="flex flex-col sm:flex-row gap-4 mt-8">
 
+              {/* STUDENT */}
+
               <button
-                onClick={() => setRole("student")}
+                onClick={() => navigate("/login/student")}
                 className="bg-blue-600 text-white px-7 py-3.5 rounded-xl font-semibold hover:bg-blue-700 hover:shadow-lg transition"
               >
                 👨‍🎓 Student Portal →
               </button>
 
 
+              {/* ADMIN */}
+
               <button
-                onClick={() => setRole("admin")}
+                onClick={() => navigate("/login/admin")}
                 className="bg-gray-900 text-white px-7 py-3.5 rounded-xl font-semibold hover:bg-gray-800 hover:shadow-lg transition"
               >
                 👨‍💼 Admin Portal →
@@ -183,6 +202,7 @@ function Home({ setRole }) {
               <div className="grid grid-cols-2 gap-4">
 
                 <div className="bg-blue-50 p-5 rounded-2xl">
+
                   <p className="text-gray-500 text-sm">
                     Attendance
                   </p>
@@ -194,10 +214,12 @@ function Home({ setRole }) {
                   <p className="text-xs text-gray-500 mt-1">
                     Good progress
                   </p>
+
                 </div>
 
 
                 <div className="bg-green-50 p-5 rounded-2xl">
+
                   <p className="text-gray-500 text-sm">
                     Requests
                   </p>
@@ -209,10 +231,12 @@ function Home({ setRole }) {
                   <p className="text-xs text-gray-500 mt-1">
                     Pending
                   </p>
+
                 </div>
 
 
                 <div className="bg-yellow-50 p-5 rounded-2xl">
+
                   <p className="text-gray-500 text-sm">
                     Notices
                   </p>
@@ -224,10 +248,12 @@ function Home({ setRole }) {
                   <p className="text-xs text-gray-500 mt-1">
                     New updates
                   </p>
+
                 </div>
 
 
                 <div className="bg-purple-50 p-5 rounded-2xl">
+
                   <p className="text-gray-500 text-sm">
                     Events
                   </p>
@@ -239,6 +265,7 @@ function Home({ setRole }) {
                   <p className="text-xs text-gray-500 mt-1">
                     Upcoming
                   </p>
+
                 </div>
 
               </div>
@@ -270,6 +297,7 @@ function Home({ setRole }) {
                     </div>
 
                     <div>
+
                       <p className="text-sm font-medium">
                         Gate pass submitted
                       </p>
@@ -277,6 +305,7 @@ function Home({ setRole }) {
                       <p className="text-xs text-gray-500">
                         Just now
                       </p>
+
                     </div>
 
                   </div>
@@ -289,6 +318,7 @@ function Home({ setRole }) {
                     </div>
 
                     <div>
+
                       <p className="text-sm font-medium">
                         New campus notice
                       </p>
@@ -296,6 +326,7 @@ function Home({ setRole }) {
                       <p className="text-xs text-gray-500">
                         2 hours ago
                       </p>
+
                     </div>
 
                   </div>
@@ -315,7 +346,10 @@ function Home({ setRole }) {
 
       {/* ================= FEATURES ================= */}
 
-      <section id="features" className="bg-white py-20 px-6">
+      <section
+        id="features"
+        className="bg-white py-20 px-6"
+      >
 
         <div className="max-w-7xl mx-auto">
 
@@ -401,7 +435,10 @@ function Home({ setRole }) {
 
       {/* ================= SERVICES ================= */}
 
-      <section id="services" className="py-20 px-6 bg-gray-50">
+      <section
+        id="services"
+        className="py-20 px-6 bg-gray-50"
+      >
 
         <div className="max-w-7xl mx-auto">
 
@@ -456,7 +493,10 @@ function Home({ setRole }) {
 
       {/* ================= HOW IT WORKS ================= */}
 
-      <section id="how-it-works" className="py-20 px-6 bg-white">
+      <section
+        id="how-it-works"
+        className="py-20 px-6 bg-white"
+      >
 
         <div className="max-w-6xl mx-auto">
 
@@ -507,9 +547,14 @@ function Home({ setRole }) {
 
       {/* ================= STUDENT / ADMIN ================= */}
 
-      <section id="about" className="py-20 px-6 bg-gray-50">
+      <section
+        id="about"
+        className="py-20 px-6 bg-gray-50"
+      >
 
         <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-8">
+
+          {/* STUDENT */}
 
           <div className="bg-blue-600 text-white rounded-3xl p-8 md:p-10">
 
@@ -531,8 +576,9 @@ function Home({ setRole }) {
 
             </ul>
 
+
             <button
-              onClick={() => setRole("student")}
+              onClick={() => navigate("/login/student")}
               className="mt-8 bg-white text-blue-600 px-6 py-3 rounded-xl font-semibold hover:bg-blue-50 transition"
             >
               Open Student Portal →
@@ -540,6 +586,8 @@ function Home({ setRole }) {
 
           </div>
 
+
+          {/* ADMIN */}
 
           <div className="bg-gray-900 text-white rounded-3xl p-8 md:p-10">
 
@@ -561,8 +609,9 @@ function Home({ setRole }) {
 
             </ul>
 
+
             <button
-              onClick={() => setRole("admin")}
+              onClick={() => navigate("/login/admin")}
               className="mt-8 bg-white text-gray-900 px-6 py-3 rounded-xl font-semibold hover:bg-gray-100 transition"
             >
               Open Admin Portal →
@@ -591,7 +640,7 @@ function Home({ setRole }) {
 
 
           <button
-            onClick={() => setRole("student")}
+            onClick={() => navigate("/login/student")}
             className="mt-8 bg-white text-blue-600 px-8 py-3.5 rounded-xl font-bold hover:bg-blue-50 transition"
           >
             Get Started →
@@ -685,4 +734,3 @@ function Home({ setRole }) {
 }
 
 export default Home
-
